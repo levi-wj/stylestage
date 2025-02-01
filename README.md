@@ -1,31 +1,52 @@
-# Style Stage Source Sass
+# Style Stage
 
-> A minimal starter for Style Stage submissions that includes the source Sass used to create the base Style Stage theme, and the source HTML.
+## Theme
 
-[Read the full guidelines](https://stylestage.dev/guidelines/) to ensure your final styles will be ready for inclusion in the showcase!
+The concept for the theme is a scrapbook. We will incorporate skeumorphic designs that imitate polaroid photos, post-it notes, tape, newspaper clippings, etc.
 
-## To Use
+All the major blocks of content will look like polaroid photos, with big white margins, filtered/desaturated colors, and handwritten-looking notes written on the edges.
 
-1. Fork or select "Use this Template"
-2. Once cloned to your computer, run `npm i` to install dependencies needed to compile the Sass
-3. Run `npm start` to launch a hot-reload server that watches for Sass changes.
+### Colors
 
-The final stylesheet will be placed in `public/style.css`.
+<pre>
+$color-primary: #dab170 !default;
+$color-primary-alt: #f5f496 !default;
+$color-secondary: #65b753 !default;
+$color-background: #d2fbf7 !default;
+</pre>
 
-You may alter anything and everything, but keep in mind that the final stylesheet should be unminified and ideally non-prefixed. All Style Stage submissions are parsed with `autoprefixer` during the publish build process, and unminified stylesheets are easier for visitors to learn from.
+### Partials
 
-> If you change the output stylesheet name, be sure to update the link to it in `index.html`
+*Composition*
+<pre>
+_fonts.scss
+_reset.scss
+_layout.scss
+_theme.scss
+</pre>
 
-### Publish to Github Pages
-This starter uses github actions to auto deploy `public` directory to `gh-pages` branch whenever there is a push to `main` branch.
-1. Go to repo settings, under Github Pages, select `gh-pages` as source.
-2. Go to https://username.github.io/stylestage-sass to see your published site.
+*Utility*
+<pre>
+_spacing.scss
+_images.scss
+</pre>
 
-## Submitting Your Stylesheet
+*Block*
+<pre>
+_sections.scss
+_header.scss
+_footer.scss
+</pre>
 
-Once you've created your stylesheet with this starter, publish this as a public repo and then you can use the GitHub link to the "raw" version of the `public/style.css` file for your final submission.
+*Exceptions*
+<pre>
+not determined yet
+</pre>
 
-If you choose to publish to github pages, you can use:
-https://username.github.io/stylestage-sass/style.css
+## Wireframes
 
-You will need to fork [the main Style Stage repo](https://github.com/5t3ph/stylestage) to add your stylesheet, as [explained in the FAQ](https://stylestage.dev/guidelines/#how-do-i-create-a-pull-request-pr).
+*Desktop view*
+![Desktop View](<img/Desktop View.png>)
+
+*Mobile View*
+![Mobile View](<img/Mobile View.png>)
