@@ -1,20 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500&display=swap");
 :root {
+  --color-anchor: $color-primary;
+  --font-family: "Baloo 2", sans-serif;
+  --font-weight-strong: 500;
   --color-primary: #dab170;
   --color-primary-alt: #f5f496;
   --color-secondary: #65b753;
   --color-background: #d2fbf7;
-  --color-text: rgb(149.5083333333, 123.2, 81.4916666667);
-  --color-light: #fff;
-  --color-anchor: #dab170;
-  --font-family: "Baloo 2", sans-serif;
-  --font-weight-strong: 500;
   --font-size-h1: 6rem;
   --font-size-h2: 3rem;
   --font-size-h3: 2rem;
   --font-size-h4: 1.35rem;
   --font-size-text: 1.15rem;
-  --border-radius: 8px;
 }
 
 /*

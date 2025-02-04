@@ -3,38 +3,12 @@ $color-primary-alt: #f5f496 !default;
 $color-secondary: #65b753 !default;
 $color-background: #d2fbf7 !default;
 
-$brand-colors: (
+$colors: (
   primary: $color-primary,
   primary-alt: $color-primary-alt,
   secondary: $color-secondary,
-) !default;
-
-$color-body: scale-color(
-  $color-primary,
-  $lightness: -30%,
-  $saturation: -50%
-) !default;
-$color-gray: mix(#767676, $color-body, 70%) !default;
-
-$colors: map-merge(
-  $brand-colors,
-  (
-    background: $color-background,
-    text: $color-body,
-    light: #fff,
-  )
+  background: $color-background,
 );
-
-@function color($key) {
-  @return map-get($colors, $key);
-}
-
-@function svgColor($color) {
-  @return "%23" + str-slice("#{color($color)}", 2, -1);
-}
-
-$link-color: color(primary) !default;
-$border-radius: 8px !default;
 
 $font-weight-strong: 500 !default;
 $font-size-h1: 6rem !default;
@@ -53,17 +27,15 @@ $font-sizes: (
 
 // stylelint-disable
 :root {
+  --color-anchor: $color-primary;
+  --font-family: "Baloo 2", sans-serif;
+  --font-weight-strong: #{$font-weight-strong};
+
   @each $key, $color in $colors {
     --color-#{$key}: #{$color};
   }
 
-  --color-anchor: #{$link-color};
-  --font-family: "Baloo 2", sans-serif;
-  --font-weight-strong: #{$font-weight-strong};
-
   @each $key, $size in $font-sizes {
     --font-size-#{$key}: #{$size};
   }
-
-  --border-radius: #{$border-radius};
 }
