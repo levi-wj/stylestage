@@ -1,14 +1,4 @@
-$color-primary: #dab170 !default;
-$color-primary-alt: #f5f496 !default;
-$color-secondary: #65b753 !default;
-$color-background: #d2fbf7 !default;
-
-$colors: (
-  primary: $color-primary,
-  primary-alt: $color-primary-alt,
-  secondary: $color-secondary,
-  background: $color-background,
-);
+@use "../utility/breakpoints" as b;
 
 $font-weight-strong: 500 !default;
 $font-size-h1: 6rem !default;
@@ -31,11 +21,19 @@ $font-sizes: (
   --font-family: "Baloo 2", sans-serif;
   --font-weight-strong: #{$font-weight-strong};
 
-  @each $key, $color in $colors {
-    --color-#{$key}: #{$color};
-  }
+  --color-primary: #dab170;
+  --color-primary-alt: #f5f496;
+  --color-secondary: #65b753;
+  --color-paper: #f5f4eb;
+  --color-paper-text: #2b2b2a;
 
   @each $key, $size in $font-sizes {
     --font-size-#{$key}: #{$size};
+  }
+}
+
+body {
+  @include b.sbreak {
+    padding: 2rem;
   }
 }
