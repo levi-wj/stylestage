@@ -1,0 +1,21 @@
+@use "../utility/shadows" as s;
+
+.link-github {
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-paper);
+    padding: .5rem;
+    text-decoration: none;
+    color: var(--color-paper-text);
+    box-shadow: s.$paper-shadow;
+
+    svg {
+        width: 1em;
+
+        > path {
+            fill: var(--color-paper-text);
+        }
+    }
+}
