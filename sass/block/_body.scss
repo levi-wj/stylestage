@@ -1,0 +1,45 @@
+@use "../utility/shadows" as s;
+
+/*background*/
+
+body {
+    background-image: url(/img/corkboard.jpg);
+
+}
+@mixin picture() {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    height: 50%;
+    width: 50%;
+    justify-content: center;
+    align-items: center; 
+}
+
+main {
+    @include picture;
+    section {
+        font-family: "Permanent Marker", serif;
+      
+        background-image: url(/img/sticky_note.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        box-shadow: 20px 20px 6px -2px #393939;
+    }
+    .container{
+        margin: 20px 0px;
+        padding: 20px;
+    }
+}
+footer {
+    padding: 30px 10px 10px 10px ;
+    .container{
+        background-color: white;
+    }
+}
+
+aside {
+    .container {
+        background-color: white;
+    }
+}

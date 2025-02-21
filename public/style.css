@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500&display=swap");
+/*marker font*/
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
 :root {
   --color-anchor: $color-primary;
   --font-family: "Baloo 2", sans-serif;
@@ -121,6 +123,43 @@ header {
   width: auto;
   height: auto;
   padding: 0.5em;
+}
+
+/*background*/
+body {
+  background-image: url(/img/corkboard.jpg);
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  height: 50%;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+}
+main section {
+  font-family: "Permanent Marker", serif;
+  background-image: url(/img/sticky_note.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 20px 20px 6px -2px #393939;
+}
+main .container {
+  margin: 20px 0px;
+  padding: 20px;
+}
+
+footer {
+  padding: 30px 10px 10px 10px;
+}
+footer .container {
+  background-color: white;
+}
+
+aside .container {
+  background-color: white;
 }
 
 /*# sourceMappingURL=style.css.map */
