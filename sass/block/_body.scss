@@ -3,7 +3,7 @@
 /*background*/
 
 body {
-    background-image: url(/img/corkboard.jpg);
+    background-image: url("/img/corkboard.jpg");
 
 }
 @mixin picture() {
@@ -21,7 +21,7 @@ main {
     section {
         font-family: "Permanent Marker", serif;
       
-        background-image: url(/img/sticky_note.jpg);
+        background-image: url("/img/sticky_note.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         box-shadow: 20px 20px 6px -2px #393939;
