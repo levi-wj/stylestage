@@ -1,4 +1,5 @@
 @use "../utility/shadows" as s;
+@use "../utility/tape" as t;
 
 .link-github {
     display: flex;
@@ -18,4 +19,6 @@
             fill: var(--color-paper-text);
         }
     }
+
+    @include t.taped(1.5);
 }
