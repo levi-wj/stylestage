@@ -33,6 +33,13 @@ main {
     align-content: center;
 }
 
+@mixin little_sticky {
+    padding: 10px;
+    text-decoration: none;
+    background-color: rgb(255, 0, 179);
+    box-shadow: 2px 3px 6px -1px #393939;
+    margin: 5px;
+}
 article:nth-child(1){
     @include format;
     section:nth-child(1) {
@@ -46,12 +53,16 @@ article:nth-child(1){
         transform: rotate(-5deg)
     }
     ul{
+        padding: 0;
         display: flex;
         flex-wrap: wrap;
+        justify-content: start;
 
     }
-    li{
-        text-decoration: none;
+    li{ 
+        @include little_sticky;
+        list-style: none;
+
         }
 }
 
@@ -83,14 +94,13 @@ article:nth-child(3){
         grid-column:3/6 ;
         grid-row: 3;
         padding: 0px;
+
         h3{
             padding: 10px;
         }
-        a{
-            padding: 10px;
-            text-decoration: none;
-            background-color: rgb(255, 0, 179);
-            box-shadow: 2px 3px 6px -1px #393939;
+        a{  
+            @include little_sticky;
+
         }
     }
 }
