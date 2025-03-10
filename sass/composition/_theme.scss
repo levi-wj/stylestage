@@ -27,6 +27,11 @@ $font-sizes: (
   --color-paper: #f5f4eb;
   --color-paper-text: #2b2b2a;
 
+  --color-postit-yellow: #fff68b;
+  --color-postit-green: #cdfc93;
+  --color-postit-purple: #ce81ff;
+  --color-postit-blue: #71d7ff;
+
   @each $key, $size in $font-sizes {
     --font-size-#{$key}: #{$size};
   }

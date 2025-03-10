@@ -5,7 +5,7 @@
 header {
     @include p.paper;
     transform: rotate(-2deg);
-    padding-top: 4rem;
+    padding-top: 4.5rem;
 
     box-shadow: s.$paper-shadow;
 
@@ -15,12 +15,33 @@ header {
             padding-top: 0;
         }
 
-        > p > a:first-child {
-            @include t.taped(1);
-            background-color: pink;
-            text-decoration: none;
-            padding: .25em;
-            
+        > h2 {
+            font-weight: 100;
+            line-height: 1.1em;
+        }
+
+        > p {
+            > a {
+                color: var(--color-paper-text);
+                box-shadow: s.$paper-shadow-small;
+                display: inline-block;
+                text-decoration: none;
+                padding: .2em;
+
+                &:first-child {
+                    transform: rotate(-2deg);
+                    background-color: var(--color-postit-green);
+                }
+
+                &:nth-child(2) {
+                    transform: rotate(2deg);
+                    background-color: var(--color-postit-yellow);
+                }
+
+                &:hover {
+                    transform: rotate(0deg);
+                }
+            }
         }
     }
 }
