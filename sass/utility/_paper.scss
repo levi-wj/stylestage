@@ -4,12 +4,11 @@
   --paper-color: hsl(0, 15%, 95%);
   --ink-color: hsl(0, 0%, 12%);
   --line-thickness: 3px;
-  --top-space: 4lh;
+  --top-space: 8rem;
 }
 
 @mixin paper {
   background: var(--paper-color);
-  margin: 2rem;
   padding: 1rem 3rem 1rem 5.5rem;
   font-family: system-ui;
   font-size: 1.5rem;
