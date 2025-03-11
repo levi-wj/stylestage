@@ -1,24 +1,7 @@
 @mixin sbreak() {
-    @media (min-width: 550px) { @content; }
-    h1, h2, h3 {
-        font-family: "permanent marker", "serif";
-    }
-    
-    p, a, li {
-        font-family: "Baloo", "serif";
-        font-size: 12px;
-    }
-
-    
-    article{
-        section:nth-child(1) {
-            grid-column:1/8 ;
-            transform: rotate(5deg)
-        }
-    }
+    @media (min-width: 550px) { @content; }  
 }
-
-
 @mixin lbreak() {
     @media (min-width: 800px) { @content; }
+    
 }
