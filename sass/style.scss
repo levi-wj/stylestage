@@ -2,7 +2,9 @@
 @use "composition/theme";
 @use "composition/reset";
 
+@use "block/footer";
 @use "block/header";
 @use "block/githublink";
+@use "block/nav";
 @use "block/skiplink";
 @use "block/body";

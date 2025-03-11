@@ -2,7 +2,7 @@
 @use "../utility/paper" as p;
 @use "../utility/shadows" as s;
 
-header {
+footer {
     @include p.paper;
     transform: rotate(-1.5deg);
     padding-top: 4.5rem;

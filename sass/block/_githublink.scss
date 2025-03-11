@@ -2,15 +2,16 @@
 @use "../utility/tape" as t;
 
 .link-github {
-    display: flex;
-    gap: .5rem;
-    align-items: center;
-    justify-content: center;
+    display: inline-block;
     background-color: var(--color-paper);
     padding: .5rem;
     text-decoration: none;
     color: var(--color-paper-text);
-    box-shadow: s.$paper-shadow;
+    box-shadow: s.$paper-shadow-small;
+
+    &:hover {
+        background-color: var(--color-postit-yellow);
+    }
 
     svg {
         width: 1em;
