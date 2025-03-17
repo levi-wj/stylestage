@@ -1,12 +1,14 @@
 @use "../utility/tape" as t;
 @use "../utility/paper" as p;
 @use "../utility/shadows" as s;
+@use "../utility/breakpoints" as b;
 
 .page-footer {
     @include p.notepad;
     padding-top: 4.5rem;
     transform: rotate(.1deg);
     margin-bottom: 1.5em;
+    margin-top: 1.5em;
     box-shadow: s.$paper-shadow;
 
     > .container {
@@ -14,10 +16,43 @@
             display: inline-block;
 
             > a {
+                color: var(--color-paper-text);
+                box-shadow: s.$paper-shadow-small;
+                display: inline-block;
+                text-decoration: none;
+                padding: .2em;
+
+                &:nth-child(3n) {
+                    background-color: var(--color-postit-blue);
+                    transform: rotate(-2deg);
+                }
+                &:nth-child(3n + 1) {
+                    background-color: var(--color-postit-green);
+                    transform: rotate(2deg);
+                }
+                &:nth-child(3n + 2) {
+                    background-color: var(--color-postit-purple);
+                }
+
+                &:hover {
+                    transform: rotate(1deg);
+                }
             }
         }
 
         > ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+
+            @include b.sbreak() {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            @include b.lbreak() {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
             > li {
                 height: 100%;
                 flex-grow: 1;
@@ -31,12 +66,17 @@
                     transform: rotate(-1deg);
                 }
                 &:nth-child(3) > a {
+                    background-color: var(--color-postit-blue);
+                }
+                &:nth-child(4) > a {
                     background-color: var(--color-postit-yellow);
                 }
 
-                a > {
-                    padding-bottom: 1em;
-                    padding-top: 1em;
+                > a {
+                    @include t.taped(1.5);
+
+                    padding-bottom: .5em;
+                    padding-top: .5em;
                     text-decoration: none;
                     display: block;
                     text-align: center;
