@@ -1,5 +1,6 @@
 @use "../utility/shadows" as s;
 @use "../utility/breakpoints" as b;
+@use "../utility/pushpin" as p;
 
 /*background*/
 
@@ -45,6 +46,7 @@ main {
 /*small*/
 article:nth-child(1){
     section:nth-child(1) {
+        @include p.pushpin(60px);
         grid-column: 1/8;
         transform: rotate(5deg);
     }
@@ -55,6 +57,7 @@ article:nth-child(1){
 }
 article:nth-child(2){
     section:nth-child(1) {
+        @include p.pushpin(60px);
         grid-column: 1/8;
         transform: rotate(5deg);
     }
@@ -69,7 +72,8 @@ article:nth-child(3){
         transform: rotate(5deg);
     }
     footer {     
-        grid-column:2/6 ;
+        @include p.pushpin(60px);
+        grid-column:2/6;
         grid-row: 3;
         transform: rotate(-5deg);
     }
