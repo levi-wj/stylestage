@@ -5,8 +5,8 @@
         content: "";
         display: block;
         position: absolute;
-        top: calc(($size / 3) * -1);
-        right: calc(($size / 2) * -1);
+        top: calc((#{$size} / 3) * -1);
+        right: calc((#{$size} / 2) * -1);
         width: $size;
         height: $size;
         background-image: url('/img/push-pin.svg');
