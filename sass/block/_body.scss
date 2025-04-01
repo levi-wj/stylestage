@@ -41,6 +41,26 @@ main {
         padding: 20px;
     }
 }
+@mixin purple_sticky{
+    text-decoration: none;
+    color: var(--color-paper-text);
+    box-shadow: s.$paper-shadow-small;
+    display: inline-block;
+    text-decoration: none;
+    padding: .2em;
+    margin: 2px;
+    background-color: var(--color-postit-purple);
+    
+    &:hover {
+        transform: rotate(2deg);
+    }
+}
+// links
+ main section, article, aside {
+    a {
+        @include purple_sticky;
+    }
+}
 
 // Base layout (mobile)
 article:nth-child(1){
