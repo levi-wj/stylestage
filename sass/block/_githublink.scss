@@ -23,7 +23,7 @@
     &:hover {
         background-color: var(--color-postit-yellow);
 
-        span > svg {
+        svg {
             transform: rotate(215deg);
         }
     }
