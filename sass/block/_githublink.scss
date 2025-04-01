@@ -9,15 +9,22 @@
     color: var(--color-paper-text);
     box-shadow: s.$paper-shadow-small;
 
-    &:hover {
-        background-color: var(--color-postit-yellow);
-    }
-
     svg {
         width: 1em;
-
+        transform-origin: center;
+        transition: all 1.5s ease;
+        margin-bottom: -2px;
+        
         > path {
             fill: var(--color-paper-text);
+        }
+    }
+
+    &:hover {
+        background-color: var(--color-postit-yellow);
+
+        span > svg {
+            transform: rotate(215deg);
         }
     }
 
