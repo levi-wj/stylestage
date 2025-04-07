@@ -6,4 +6,5 @@
 node_modules/
 pnpm-lock.yaml
 
-public/*.css*
+# Commenting this out to commit the compiled css file
+# public/*.css*

@@ -4,15 +4,20 @@
 @use "../utility/breakpoints" as b;
 
 .page-footer {
-    @include p.notepad;
-    padding-top: 4.5rem;
     transform: rotate(.1deg);
-    margin-bottom: 1.5em;
-    margin-top: 1.5em;
+    margin-top: 3em;
+    margin-bottom: .5em;
     box-shadow: s.$paper-shadow;
+    @include p.notepad(7rem);
+    @include b.lbreak() {
+        @include p.notepad(5rem);
+    }
 
     > .container {
+        padding-top: 2.5rem;
+
         > p {
+            margin-top: 0;
             display: inline-block;
 
             > a {
@@ -21,7 +26,7 @@
                 display: inline-block;
                 text-decoration: none;
                 padding: .2em;
-
+                
                 &:nth-child(3n) {
                     background-color: var(--color-postit-blue);
                     transform: rotate(-2deg);
@@ -41,16 +46,22 @@
         }
 
         > ul {
+            margin-top: 1.5em;
             list-style: none;
             display: grid;
             grid-template-columns: 1fr;
             gap: 1rem;
+            margin-bottom: 2.5em;
 
             @include b.sbreak() {
                 grid-template-columns: repeat(2, 1fr);
             }
+            @include b.mbreak() {
+                margin-bottom: 1.75em; 
+            }
             @include b.lbreak() {
                 grid-template-columns: repeat(4, 1fr);
+                margin-bottom: 2em;
             }
 
             > li {

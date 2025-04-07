@@ -2,6 +2,7 @@
 @use "../utility/breakpoints" as b;
 @use "../utility/pushpin" as pin;
 @use "../utility/polaroid" as picture;
+@use "../utility/paper" as paper;
 
 // Base styles (mobile first)
 body {
@@ -26,7 +27,7 @@ body {
 }
 
 @mixin little_sticky {
-    padding: 10px;
+    padding: 5px;
     text-decoration: none;
     background-color: rgb(255, 0, 179);
     box-shadow: s.$paper-shadow-small;
@@ -71,14 +72,20 @@ article:nth-child(1){
         transform: rotate(3deg);
     }
     section:nth-child(2) {
-        grid-column: 1/8;
+        grid-column: 2/8;
         transform: rotate(-3deg);
+        @include paper.paper(5rem);
+        @include pin.pushpin(60px);
+
+        > p {
+            margin-top: .5em;
+            margin-bottom: 1.5em;
+        }
     }
 }
 
 article:nth-child(2){
     section:nth-child(1) {
-        @include pin.pushpin(60px);
         grid-column: 1/8;
         transform: rotate(2deg);
     }
@@ -86,6 +93,7 @@ article:nth-child(2){
 
 article:nth-child(3){
     section:nth-child(1) {
+        @include pin.pushpin(60px);
         grid-column: 3/8;
         transform: rotate(-3deg);
     }
@@ -188,6 +196,16 @@ main #about {
         section:nth-child(2) {
             grid-column: 1/7;
             grid-row: 2;
+            @include paper.paper(5rem);
+
+            > p {
+                margin-top: .15em;
+                line-height: 1.7rem;
+            }
+
+            > h2 {
+                margin-top: .2em;
+            }
         }
     }
     
@@ -246,6 +264,16 @@ main #about {
     
         section:nth-child(2) {
             grid-column: 4/8;
+
+            @include paper.paper(4rem);
+
+            > p {
+                line-height: 1.7rem;
+                margin-top: 1em;
+            }
+            > h2 {
+                margin-top: .25em;
+            }
         }
     }
     

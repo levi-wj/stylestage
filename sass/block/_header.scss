@@ -1,9 +1,11 @@
 @use "../utility/tape" as t;
 @use "../utility/paper" as p;
 @use "../utility/shadows" as s;
+@use "../utility/breakpoints" as b;
 
 header {
-    @include p.paper;
+    @include p.paper(8rem);
+    font-size: 1.5rem;
     transform: rotate(-1.5deg);
     padding-top: 4.5rem;
     margin-bottom: 1.5em;
@@ -21,7 +23,11 @@ header {
         }
 
         > p {
+            margin-top: 1.2em;
             display: inline-block;
+            @include b.mbreak() {
+                margin-top: 1.5em;
+            }
 
             > a {
                 color: var(--color-paper-text);

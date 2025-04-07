@@ -1,7 +1,7 @@
 @mixin paperbase {
   padding: 1rem 3rem 1rem 5.5rem;
   font-family: system-ui;
-  font-size: 1.5rem;
+  // font-size: 1.5rem;
   line-height: 1.6;
   color: var(--ink-color);
   background-color: var(--paper-color);
@@ -40,24 +40,24 @@
   box-shadow: 0 0 1rem rgb(0 0 0 / 0.25);
 }
 
-@mixin paper {
+@mixin paper($topspace) {
   --paper-color: hsl(0, 15%, 95%);
   --main-line-color: hsl(234, 62%, 86%);
   --side-line-color: hsl(350, 100%, 91%);
   --second-side-line-color: transparent;
   --ink-color: hsl(0, 0%, 12%);
   --line-thickness: 3px;
-  --top-space: 8rem;
+  --top-space: #{$topspace};
   @include paperbase();
 }
 
-@mixin notepad {
-  --paper-color: hsl(56, 100%, 80%);
+@mixin notepad($topspace) {
+  --paper-color: hsl(56, 96%, 82%);
   --main-line-color: hsla(191, 42%, 42%, 0.526);
   --side-line-color: hsla(0, 68%, 51%, 0.354);
   --second-side-line-color: hsla(0, 68%, 51%, 0.354);
   --ink-color: hsl(0, 0%, 12%);
   --line-thickness: 3px;
-  --top-space: 8rem;
+  --top-space: #{$topspace};
   @include paperbase();
 }
