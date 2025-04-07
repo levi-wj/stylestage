@@ -1,6 +1,7 @@
 @use "../utility/shadows" as s;
 @use "../utility/breakpoints" as b;
-@use "../utility/pushpin" as p;
+@use "../utility/pushpin" as pin;
+@use "../utility/polaroid" as picture;
 
 // Base styles (mobile first)
 body {
@@ -13,7 +14,7 @@ body {
     background: linear-gradient(to bottom, #e9d83e, #ffff8d);
     background-size: cover;
     background-repeat: no-repeat;
-    box-shadow: 20px 20px 6px -2px #393939;
+    box-shadow: s.$postit-shadow;
 }
 
 @mixin format {
@@ -28,12 +29,12 @@ body {
     padding: 10px;
     text-decoration: none;
     background-color: rgb(255, 0, 179);
-    box-shadow: 2px 3px 6px -1px #393939;
+    box-shadow: s.$paper-shadow-small;
     margin: 5px;
 }
 
 main {
-    section, footer {
+    section {
         @include postit;
     }
     .container {
@@ -65,7 +66,7 @@ main {
 // Base layout (mobile)
 article:nth-child(1){
     section:nth-child(1) {
-        @include p.pushpin(60px);
+        @include pin.pushpin(60px);
         grid-column: 1/8;
         transform: rotate(3deg);
     }
@@ -77,7 +78,7 @@ article:nth-child(1){
 
 article:nth-child(2){
     section:nth-child(1) {
-        @include p.pushpin(60px);
+        @include pin.pushpin(60px);
         grid-column: 1/8;
         transform: rotate(2deg);
     }
@@ -92,11 +93,19 @@ article:nth-child(3){
         grid-column: 1/7;
         transform: rotate(3deg);
     }
-    footer {     
-        @include p.pushpin(60px);
+    #files {
         grid-column: 2/6;
         grid-row: 3;
         transform: rotate(-2deg);
+
+        > div.container {
+            @include pin.pushpin(60px);
+            @include picture.polaroid;
+
+            > a {
+                @include little_sticky;
+            }
+        }
     }
 }
 
@@ -206,9 +215,6 @@ main #about {
     
             h3 {
                 padding: 10px;
-            }
-            a {  
-                @include little_sticky;
             }
         }
     }

@@ -31,6 +31,9 @@ $font-sizes: (
   --color-postit-purple: #ce81ff;
   --color-postit-blue: #71d7ff;
 
+  --color-polaroid-bg: #383e3f;
+  --color-polaroid-bg-top: #667275;
+
   @each $key, $size in $font-sizes {
     --font-size-#{$key}: #{$size};
   }

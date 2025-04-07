@@ -4,6 +4,7 @@
     &::before {
         content: "";
         display: block;
+        z-index: 100;
         position: absolute;
         top: calc((#{$size} / 3) * -1);
         right: calc((#{$size} / 2) * -1);

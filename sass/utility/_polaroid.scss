@@ -1,0 +1,32 @@
+@use "../utility/shadows" as s;
+
+@mixin polaroid {
+  display: flex;
+  flex-direction: column-reverse;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: var(--color-paper-text);
+  background-color: white;
+  position: relative;
+  padding: 1em;
+  box-shadow: s.$paper-shadow;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: .8em;
+    left: .8em;
+    right: .8em;
+    bottom: 3em;
+    background: linear-gradient(to bottom, var(--color-polaroid-bg-top), var(--color-polaroid-bg));
+  }
+
+  h3 {
+    margin-top: 3em;
+    padding: 0;
+  }
+
+  > * {
+    z-index: 2;
+  }
+}
