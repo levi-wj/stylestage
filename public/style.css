@@ -104,7 +104,7 @@ select {
   transform: rotate(0.1deg);
   margin-top: 3em;
   margin-bottom: 0.5em;
-  box-shadow: 10px 10px 6px -6px rgba(0, 0, 0, 0.568627451);
+  box-shadow: 10px 10px 6px -6px #00000091;
   --paper-color: hsl(56, 96%, 82%);
   --main-line-color: hsla(191, 42%, 42%, 0.526);
   --side-line-color: hsla(0, 68%, 51%, 0.354);
@@ -147,7 +147,7 @@ select {
 }
 .page-footer > .container > p > a {
   color: var(--color-paper-text);
-  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.568627451);
+  box-shadow: 0 5px 5px -3px #00000091;
   display: inline-block;
   text-decoration: none;
   padding: 0.2em;
@@ -219,16 +219,16 @@ select {
   height: 100%;
   font-weight: bold;
   color: var(--color-paper-text);
-  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.568627451);
+  box-shadow: 0 5px 5px -3px #00000091;
   font-family: "permanent marker", sans-serif;
 }
 .page-footer > .container > ul > li > a::before, .page-footer > .container > ul > li > a::after {
   content: "";
   transform: rotate(45deg);
-  right: -3vmin;
+  right: calc(-2vmin * $size);
   top: 0;
-  width: 7.5vmin;
-  height: 3vmin;
+  width: calc(5vmin * $size);
+  height: calc(2vmin * $size);
   position: absolute;
   background-color: var(--tape-gray);
   opacity: 0.5;
@@ -237,7 +237,7 @@ select {
 }
 .page-footer > .container > ul > li > a::after {
   transform: rotate(-45deg);
-  left: -3vmin;
+  left: calc(-2vmin * $size);
 }
 
 header {
@@ -259,7 +259,7 @@ header {
   transform: rotate(-1.5deg);
   padding-top: 4.5rem;
   margin-bottom: 1.5em;
-  box-shadow: 10px 10px 6px -6px rgba(0, 0, 0, 0.568627451);
+  box-shadow: 10px 10px 6px -6px #00000091;
 }
 header > .container > h1 {
   margin-top: 0em;
@@ -280,7 +280,7 @@ header > .container > p {
 }
 header > .container > p > a {
   color: var(--color-paper-text);
-  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.568627451);
+  box-shadow: 0 5px 5px -3px #00000091;
   display: inline-block;
   text-decoration: none;
   padding: 0.2em;
@@ -308,7 +308,7 @@ header > .container > .link-github {
   padding: 0.5rem;
   text-decoration: none;
   color: var(--color-paper-text);
-  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.568627451);
+  box-shadow: 0 5px 5px -3px #00000091;
   position: relative;
 }
 .link-github svg {
@@ -329,10 +329,10 @@ header > .container > .link-github {
 .link-github::before, .link-github::after {
   content: "";
   transform: rotate(45deg);
-  right: -3vmin;
+  right: calc(-2vmin * $size);
   top: 0;
-  width: 7.5vmin;
-  height: 3vmin;
+  width: calc(5vmin * $size);
+  height: calc(2vmin * $size);
   position: absolute;
   background-color: var(--tape-gray);
   opacity: 0.5;
@@ -341,7 +341,7 @@ header > .container > .link-github {
 }
 .link-github::after {
   transform: rotate(-45deg);
-  left: -3vmin;
+  left: calc(-2vmin * $size);
 }
 
 nav > ul {
@@ -396,7 +396,7 @@ nav > ul > li > a {
   height: 100%;
   font-weight: bold;
   color: var(--color-paper-text);
-  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.568627451);
+  box-shadow: 0 5px 5px -3px #00000091;
   font-family: "permanent marker", sans-serif;
 }
 
@@ -441,7 +441,7 @@ main .container {
 main section a, article a, aside a {
   text-decoration: none;
   color: var(--color-paper-text);
-  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.568627451);
+  box-shadow: 0 5px 5px -3px #00000091;
   display: inline-block;
   text-decoration: none;
   padding: 0.2em;
@@ -462,8 +462,8 @@ article:nth-child(1) section:nth-child(1)::before {
   display: block;
   z-index: 100;
   position: absolute;
-  top: calc(60px / 3 * -1);
-  right: calc(60px / 2 * -1);
+  top: calc((60px / 3) * -1);
+  right: calc((60px / 2) * -1);
   width: 60px;
   height: 60px;
   background-image: url("/img/push-pin.svg");
@@ -494,8 +494,8 @@ article:nth-child(1) section:nth-child(2)::before {
   display: block;
   z-index: 100;
   position: absolute;
-  top: calc(60px / 3 * -1);
-  right: calc(60px / 2 * -1);
+  top: calc((60px / 3) * -1);
+  right: calc((60px / 2) * -1);
   width: 60px;
   height: 60px;
   background-image: url("/img/push-pin.svg");
@@ -522,8 +522,8 @@ article:nth-child(3) section:nth-child(1)::before {
   display: block;
   z-index: 100;
   position: absolute;
-  top: calc(60px / 3 * -1);
-  right: calc(60px / 2 * -1);
+  top: calc((60px / 3) * -1);
+  right: calc((60px / 2) * -1);
   width: 60px;
   height: 60px;
   background-image: url("/img/push-pin.svg");
@@ -549,15 +549,15 @@ article:nth-child(3) #files > div.container {
   background-color: white;
   position: relative;
   padding: 1em;
-  box-shadow: 10px 10px 6px -6px rgba(0, 0, 0, 0.568627451);
+  box-shadow: 10px 10px 6px -6px #00000091;
 }
 article:nth-child(3) #files > div.container::before {
   content: "";
   display: block;
   z-index: 100;
   position: absolute;
-  top: calc(60px / 3 * -1);
-  right: calc(60px / 2 * -1);
+  top: calc((60px / 3) * -1);
+  right: calc((60px / 2) * -1);
   width: 60px;
   height: 60px;
   background-image: url("/img/push-pin.svg");
@@ -583,8 +583,8 @@ article:nth-child(3) #files > div.container > * {
 article:nth-child(3) #files > div.container > a {
   padding: 5px;
   text-decoration: none;
-  background-color: rgb(255, 0, 179);
-  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.568627451);
+  background-color: #ff00b3;
+  box-shadow: 0 5px 5px -3px #00000091;
   margin: 5px;
 }
 
@@ -615,8 +615,8 @@ main #about ul {
 main #about li {
   padding: 5px;
   text-decoration: none;
-  background-color: rgb(255, 0, 179);
-  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.568627451);
+  background-color: #ff00b3;
+  box-shadow: 0 5px 5px -3px #00000091;
   margin: 5px;
   list-style: none;
 }
@@ -629,9 +629,11 @@ main #about li {
   article:nth-child(1) section:nth-child(2) {
     transform: rotate(-5deg);
   }
+
   article:nth-child(2) section:nth-child(1) {
     transform: rotate(5deg);
   }
+
   article:nth-child(3) section:nth-child(1) {
     transform: rotate(-5deg);
   }
@@ -641,9 +643,11 @@ main #about li {
   article:nth-child(3) footer {
     transform: rotate(-5deg);
   }
+
   aside .container:nth-child(1) {
     transform: rotate(5deg);
   }
+
   #styles div {
     transform: rotate(-5deg);
   }
@@ -651,15 +655,16 @@ main #about li {
 /* Medium breakpoint */
 @media (min-width: 700px) {
   article:nth-child(1),
-  article:nth-child(2),
-  article:nth-child(3),
-  aside {
+article:nth-child(2),
+article:nth-child(3),
+aside {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: 1fr;
     justify-content: center;
     align-content: center;
   }
+
   article:nth-child(1) section:nth-child(1) {
     grid-column: 2/8;
   }
@@ -688,9 +693,11 @@ main #about li {
   article:nth-child(1) section:nth-child(2) > h2 {
     margin-top: 0.2em;
   }
+
   article:nth-child(2) section:nth-child(1) {
     grid-column: 2/8;
   }
+
   article:nth-child(3) section:nth-child(1) {
     grid-column: 3/7;
   }
@@ -707,15 +714,18 @@ main #about li {
   article:nth-child(3) footer h3 {
     padding: 10px;
   }
+
   footer {
     padding: 30px 10px 10px 10px;
   }
+
   aside .container:nth-child(1) {
     margin-bottom: 20px;
     justify-items: center;
     align-items: center;
     transform: rotate(-1deg);
   }
+
   #styles div {
     padding: 20px;
     font-family: "Permanent Marker", serif;
@@ -756,19 +766,23 @@ main #about li {
   article:nth-child(1) section:nth-child(2) > h2 {
     margin-top: 0.25em;
   }
+
   article:nth-child(2) section:nth-child(1) {
     grid-column: 3/7;
   }
+
   article:nth-child(3) section:nth-child(1) {
     grid-column: 3/5;
   }
   article:nth-child(3) section:nth-child(2) {
     grid-column: 1/4;
   }
+
   aside .container:nth-child(1) {
     grid-column: 5/7;
     transform: none;
   }
+
   #styles div {
     grid-column: 4/6;
   }
