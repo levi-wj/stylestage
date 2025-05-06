@@ -2,7 +2,7 @@
 
 ## Theme
 
-The concept for the theme is a scrapbook. We will incorporate skeumorphic designs that imitate polaroid photos, post-it notes, tape, newspaper clippings, etc.
+The concept for the theme is a scrapbook. We will incorporate skeuomorphic designs that imitate polaroid photos, post-it notes, tape, newspaper clippings, etc.
 
 All the major blocks of content will look like polaroid photos, with big white margins, filtered/desaturated colors, and handwritten-looking notes written on the edges.
 
