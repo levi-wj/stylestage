@@ -1,9 +1,0 @@
-@mixin sbreak() {
-    @media (min-width: 550px) { @content; }  
-}
-@mixin mbreak() {
-    @media (min-width: 700px) { @content; }
-}
-@mixin lbreak() {
-    @media (min-width: 1200px) { @content; }
-}
