@@ -422,7 +422,7 @@ nav > ul > li > a {
 }
 
 body {
-  background-image: url("/img/corkboard.jpg");
+  background-image: url("img/corkboard.jpg");
 }
 
 main section {
@@ -466,7 +466,7 @@ article:nth-child(1) section:nth-child(1)::before {
   right: calc(60px / 2 * -1);
   width: 60px;
   height: 60px;
-  background-image: url("/img/push-pin.svg");
+  background-image: url("img/push-pin.svg");
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -498,7 +498,7 @@ article:nth-child(1) section:nth-child(2)::before {
   right: calc(60px / 2 * -1);
   width: 60px;
   height: 60px;
-  background-image: url("/img/push-pin.svg");
+  background-image: url("img/push-pin.svg");
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -526,7 +526,7 @@ article:nth-child(3) section:nth-child(1)::before {
   right: calc(60px / 2 * -1);
   width: 60px;
   height: 60px;
-  background-image: url("/img/push-pin.svg");
+  background-image: url("img/push-pin.svg");
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -560,7 +560,7 @@ article:nth-child(3) #files > div.container::before {
   right: calc(60px / 2 * -1);
   width: 60px;
   height: 60px;
-  background-image: url("/img/push-pin.svg");
+  background-image: url("img/push-pin.svg");
   background-size: contain;
   background-repeat: no-repeat;
 }
